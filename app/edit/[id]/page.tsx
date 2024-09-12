@@ -15,7 +15,7 @@ export default function EditPage({ params }: { params: { id: string } }) {
       try {
         const response = await fetch(`/api/interpretations/${params.id}`);
         if (!response.ok) {
-          throw new Error("Failed to feetch interpretation");
+          throw new Error("Failed to fetch interpretation");
         }
 
         const data = await response.json();
